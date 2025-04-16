@@ -2,20 +2,24 @@
   "name": "wip_builder",
   "type": "module",
   "version": "0.0.1",
+  "packageManager": "pnpm@10.8.1",
   "scripts": {
     "dev": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write --list-different ."
   },
   "dependencies": {
     "astro": "^5.7.1"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
+    "prettier": "^3.5.3",
+    "prettier-plugin-astro": "^0.14.1",
     "typescript": "^5.8.3"
   },
-  "packageManager": "pnpm@10.8.1",
   "pnpm": {
     "onlyBuiltDependencies": [
       "esbuild",
